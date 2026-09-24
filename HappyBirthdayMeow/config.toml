@@ -1,0 +1,36 @@
+# 1 = 原來大小。0.5 較小，2 較大。範圍 0.25 到 3。
+scale = 0.7
+
+# 每一格動畫停留的毫秒。數字愈小愈快。範圍 20 到 2000。
+frame_ms = 300
+
+# 每顆心隔多少分鐘減少。預設一個 30 分鐘番茄鐘。
+heart_minutes = 15
+
+# 走路速度，每秒像素。範圍 10 到 600。
+walk_speed = 90
+
+# 走多久後坐下，以及坐下多久。單位是秒。
+walk_min_seconds = 6
+walk_max_seconds = 16
+sit_min_seconds = 2
+sit_max_seconds = 6
+
+
+# 聊天後端。codex 用已經登入的 Codex，只聊天，不改檔。
+# 改成 api 就用你自己的 key。openai、gemini、grok、openrouter 會帶預設網址。
+agent = "make"
+
+# 等回覆的最長秒數。範圍 5 到 180。
+agent_timeout_seconds = 60
+
+# 只有 agent 不是 codex 時才需要。key 放 secrets.toml，不要寫在這裡。
+# Make：agent = "make"，網址放 secrets.toml 的 webhook_url。請求欄位是 prompt，回覆讀 result。
+# api_base_url = ""
+# api_model = "gpt-4.1-mini"
+#
+# Gemini:
+# agent = "gemini"
+# api_model = "gemini-2.5-flash"
+#
+# 自訂 OpenAI 相容接口時，agent 用 "api"，再填 api_base_url 和 api_model。
